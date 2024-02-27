@@ -37,7 +37,6 @@ namespace Pizzaaaaaaa
                             {
                                 Console.WriteLine("you already have this topping");
                                 Duplicate = true;
-
                             }
                         }
                         ChoiceToppings[i] = temp;
@@ -51,12 +50,25 @@ namespace Pizzaaaaaaa
                 }
                 if (Duplicate == true)
                 {
-                   Console.WriteLine("duplicate topping");
                    i--;
                 }
-               
             }
-
+            Console.Write("What size pizza would you like? \n 1 for small \n 2 for medium \n 3 for large \n>>>>");
+            int Size = Convert.ToInt16(Console.ReadLine());
+            double cost = TopppingNum*0.75;
+            if (Size == 1)
+            {
+                cost +=2.5;
+            }
+            else if (Size == 2)
+            {
+                cost +=4.5;
+            }
+            else if (Size == 3)
+            {
+                cost +=7.5;
+            }
+            Console.WriteLine($"The cost of your pizza is £{cost}");
         }
     }
 }
