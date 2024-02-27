@@ -19,7 +19,7 @@ namespace Pizzaaaaaaa
             Console.WriteLine( "Your topping options are");
             for (int l = 0; l < Toppings.Length; l++)
             {
-                Console.WriteLine(Toppings[l].ToUpper());
+                Console.WriteLine(Toppings[l]);
             }
             for (int i = 0; i < TopppingNum; i++)
             {
